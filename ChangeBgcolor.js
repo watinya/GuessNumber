@@ -11,7 +11,7 @@ let now = 0;
 
 window.addEventListener('keydown', function(e){  //對整個頁面監聽 
     let keyNum = e.key    //獲取被按下的鍵值
-    console.log(recordColor + " " + now);
+    // console.log(recordColor + " " + now);
     
     switch(keyNum){
         case "a":

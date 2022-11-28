@@ -7,7 +7,7 @@ const restart = document.getElementById("restart");
 const lastResult = document.getElementById("lastResult");
 const table = document.getElementById("resultTable").getElementsByTagName('tbody')[0];
 
-console.log(randomNum);
+// console.log(randomNum);
 
 function checkGuess(){
     var userGuess = Number(guessField.value);   //Number轉成數字  .value獲取值
@@ -74,3 +74,11 @@ function addTableRow(userGuess, lowOrHigh){
     guessNum.innerHTML = userGuess;
     result.innerHTML = lowOrHigh;
 }
+
+$("#guessField").on("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+
+      document.getElementById("guessSubmit").click();
+    }
+});
